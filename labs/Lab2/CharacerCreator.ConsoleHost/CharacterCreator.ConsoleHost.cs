@@ -52,7 +52,8 @@ namespace CharacterCreator.ConsoleHost
                     case '1': CreateCharacter(); break;
                     case '2': ViewStats(); break;
                     case '3': EditCharacter(); break;
-                    case '4': QuitHelper(); break;
+                    case '4': DeleteCharacter(); break;
+                    case '5': QuitHelper(); break;
                 }
                 Clear();
                 choice = MainMenu();
@@ -88,7 +89,7 @@ namespace CharacterCreator.ConsoleHost
         {
             Clear();
             Console.WriteLine($"Welcome {_character.characterName} what would you like to do?\n");
-            Console.WriteLine("1) Create a new character\n2) View your stats\n3) Edit your character\n4) Quit");
+            Console.WriteLine("1) Create a new character\n2) View your stats\n3) Edit your character\n4) Delete character\n5) Quit");
             do
             {
                 String input = Console.ReadLine();
@@ -98,10 +99,11 @@ namespace CharacterCreator.ConsoleHost
                     case "2": return '2';
                     case "3": return '3';
                     case "4": return '4';
+                    case "5": return '5';
                 }
                 Clear();
                 Console.WriteLine("You've entered something invalid\n please select from the options below");
-                Console.WriteLine("1) Create a new character\n2) View your stats\n3) Edit your character\n4) Quit");
+                Console.WriteLine("1) Create a new character\n2) View your stats\n3) Edit your character\n4) Delete Character\n5) Quit");
             } while (true);
         }
 
@@ -355,6 +357,38 @@ namespace CharacterCreator.ConsoleHost
                 System.Environment.Exit(0);
             }
                 return;
+        }
+
+        static void DeleteCharacter()
+        {
+            Console.Clear();
+            Console.WriteLine("Are you sure you want to delete your character? Y/N");
+            String input = Console.ReadLine();
+            input = input.ToUpper();
+            if (String.Compare(input, "Y", true) == 0)
+            {
+                DeleteHelper();
+            }
+            return;
+        }
+
+        static void DeleteHelper()
+        {
+            Console.WriteLine("You currently don't have a character, would you like to create a character? Y/N");
+            do
+            {
+                String input = Console.ReadLine();
+                if (String.Compare(input, "Y", true)==0)
+                {
+                    CreateCharacter();
+                }
+                if (String.Compare(input, "N", true)==0)
+                {
+                    QuitHelper();
+                }
+                Clear();
+                Console.WriteLine("Sorry you've entered something invalid.\nWould you like to create a new character? Y/N");
+            } while (true);
         }
 
         static void AttributeEditor()
