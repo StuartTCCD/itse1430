@@ -1,0 +1,12 @@
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\bin\Debug\net5.0\CharacterCreator.deps.json
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\bin\Debug\net5.0\CharacterCreator.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\bin\Debug\net5.0\ref\CharacterCreator.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\bin\Debug\net5.0\CharacterCreator.pdb
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.csprojAssemblyReference.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.AssemblyInfoInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.AssemblyInfo.cs
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.csproj.CoreCompileInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\ref\CharacterCreator.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab4\CharacterCreator\obj\Debug\net5.0\CharacterCreator.pdb
