@@ -1,0 +1,7 @@
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\bin\Debug\Budget.exe.config
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\bin\Debug\Budget.exe
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\bin\Debug\Budget.pdb
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\obj\Debug\Budget.csprojAssemblyReference.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\obj\Debug\Budget.csproj.CoreCompileInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\obj\Debug\Budget.exe
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab1\Budget\obj\Debug\Budget.pdb

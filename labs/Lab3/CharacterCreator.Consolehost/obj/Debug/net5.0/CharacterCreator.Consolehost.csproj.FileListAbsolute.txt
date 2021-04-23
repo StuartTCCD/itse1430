@@ -1,0 +1,16 @@
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.csprojAssemblyReference.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.AssemblyInfoInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.AssemblyInfo.cs
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.csproj.CoreCompileInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.exe
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.deps.json
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.runtimeconfig.json
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.runtimeconfig.dev.json
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\ref\CharacterCreator.Consolehost.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\bin\Debug\net5.0\CharacterCreator.Consolehost.pdb
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\ref\CharacterCreator.Consolehost.dll
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.pdb
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab3\CharacterCreator.Consolehost\obj\Debug\net5.0\CharacterCreator.Consolehost.genruntimeconfig.cache

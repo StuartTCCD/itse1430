@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -15,4 +16,23 @@ Spring 2021
     <ProjectReference Include="..\CharacterCreator.Consolehost\CharacterCreator.Consolehost.csproj" />
   </ItemGroup>
 
+=======
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Company>Stuart Beeby</Company>
+    <Product>Character Creator</Product>
+    <Description>ITSE 1430
+Spring 2021
+</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterCreator.Consolehost\CharacterCreator.Consolehost.csproj" />
+  </ItemGroup>
+
+>>>>>>> 5b928dc7477ff2c55affb2464a610bddb0a14bec
 </Project>

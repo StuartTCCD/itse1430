@@ -1,0 +1,7 @@
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\obj\Debug\CharacerCreator.ConsoleHost.csprojAssemblyReference.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\obj\Debug\CharacerCreator.ConsoleHost.csproj.CoreCompileInputs.cache
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\bin\Debug\CharacerCreator.ConsoleHost.exe.config
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\bin\Debug\CharacerCreator.ConsoleHost.exe
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\bin\Debug\CharacerCreator.ConsoleHost.pdb
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\obj\Debug\CharacerCreator.ConsoleHost.exe
+C:\Users\Tresk\source\repos\StuartTCCD\itse1430\labs\Lab2\CharacerCreator.ConsoleHost\obj\Debug\CharacerCreator.ConsoleHost.pdb
