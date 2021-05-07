@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Character Creator - Lab 5
+ * ITSE 1430
+ * Spring 2021
+ * Stuart Beeby
+ */
+
+using System;
 using System.Windows.Forms;
-using CharacterCreator;
 
 namespace CharacterCreator.Winhost
 {

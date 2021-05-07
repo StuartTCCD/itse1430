@@ -12,6 +12,7 @@ Spring 2021
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CharacterCreator.SqlServer\CharacterCreator.SqlServer.csproj" />
     <ProjectReference Include="..\CharacterCreator\CharacterCreator.csproj" />
   </ItemGroup>
 

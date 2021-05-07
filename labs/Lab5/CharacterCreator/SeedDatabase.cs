@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Character Creator - Lab 5
+ * ITSE 1430
+ * Spring 2021
+ * Stuart Beeby
+ */
 
 namespace CharacterCreator
 {
-    public class SeedDatabase
+    public static class SeedDatabase
     {
-        public void Seed ( ICharacterRoster database )
+        public static void Seed ( this ICharacterRoster database )
         {
             var character1 = new Character() {
                 Name = "Michael",
@@ -23,7 +24,7 @@ namespace CharacterCreator
             };
 
             var character2 = new Character() {
-                Name = "Bill",
+                Name = "John",
                 Profession = "Hunter",
                 Race = "Human",
                 Strength = 5,
@@ -44,9 +45,9 @@ namespace CharacterCreator
                 Charisma = 5
             };
 
-            database.Add(character1, out var error);
-            database.Add(character2, out error);
-            database.Add(character3, out error);
+            database.Add(character1);
+            database.Add(character2);
+            database.Add(character3);
         }
     }
 }

@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿/*
+ * Character Creator - Lab 5
+ * ITSE 1430
+ * Spring 2021
+ * Stuart Beeby
+ */
+
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CharacterCreator;
 
 namespace CharacterCreator.Winhost
 {
     public partial class MainForm : Form
     {
-        private readonly ICharacterRoster _roster = new MemoryCharacterRoster();
+        private readonly ICharacterRoster _roster = new SqlServer.SqlServerCharacterDatabase(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=CharacterDb;Integrated Security=True;");
 
         protected override void OnLoad ( EventArgs e )
         {
@@ -23,8 +22,7 @@ namespace CharacterCreator.Winhost
             {
                 if (MessageBox.Show(this, "Do you want to seed this database?", "Seed Database", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    var seed = new SeedDatabase();
-                    seed.Seed(_roster);
+                    _roster.Seed();
                 }
             }
             UpdatelbCharacters();
@@ -33,32 +31,6 @@ namespace CharacterCreator.Winhost
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        public int CharacterID ()
-        {
-            int index = lbCharacters.Items.Count;
-            return index;
-        }
-
-        public void AddCharacter ( Character theCharacter )
-        {
-            _roster.Add(theCharacter, out var error);
-            if (!String.IsNullOrEmpty(error))
-            {
-                DisplayError("Add Failed", error);
-            }
-            UpdatelbCharacters();
-        }
-
-        public void EditCharacter ( Character theCharacter, int id )
-        {
-            _roster.Update(id, theCharacter, out var error);
-            if (!String.IsNullOrEmpty(error))
-            {
-                DisplayError("Update Failed", error);
-            }
-            UpdatelbCharacters();
         }
 
         private void OnHelpAbout ( object sender, EventArgs e )
@@ -81,18 +53,30 @@ namespace CharacterCreator.Winhost
 
         private void OnCharacterNew ( object sender, EventArgs e )
         {
-            CreateNewCharacterForm characterCreator = new CreateNewCharacterForm();
-            characterCreator.StartPosition = FormStartPosition.CenterParent;
-            DialogResult dr = characterCreator.ShowDialog(this);
-            if (dr == DialogResult.Cancel)
+            do
             {
-                characterCreator.Close();
-            }
-            else // dr == DialogResult.OK
-            {
-                AddCharacter(characterCreator.ReturnCharacter);
-                characterCreator.Close();
-            }
+                CreateNewCharacterForm characterCreator = new CreateNewCharacterForm();
+                characterCreator.StartPosition = FormStartPosition.CenterParent;
+                DialogResult dr = characterCreator.ShowDialog(this);
+                if (dr == DialogResult.Cancel)
+                {
+                    characterCreator.Close();
+                    break;
+                } else // dr == DialogResult.OK
+                {
+                    try
+                    {
+                        _roster.Add(characterCreator.ReturnCharacter);
+                    }
+                    catch(Exception ex)
+                    {
+                        DisplayError("Add failed", ex.Message);
+                    }
+                        UpdatelbCharacters();
+                        characterCreator.Close();
+                        break;
+                }
+            } while (true);
         }
 
         private void OnCharacterEdit ( object sender, EventArgs e )
@@ -107,17 +91,30 @@ namespace CharacterCreator.Winhost
             {
                 return;
             }
-            EditCharacterForm characterEditor = new EditCharacterForm(theCharacter);
-            characterEditor.StartPosition = FormStartPosition.CenterParent;
-            DialogResult dr = characterEditor.ShowDialog(this);
-            if (dr == DialogResult.Cancel)
+            do
             {
-                characterEditor.Close();
-            } else // dr == DialogResult.OK
-            {
-                EditCharacter(characterEditor.ReturnCharacter, theCharacter.Id);
-                characterEditor.Close();
-            }
+                EditCharacterForm characterEditor = new EditCharacterForm(theCharacter);
+                characterEditor.StartPosition = FormStartPosition.CenterParent;
+                DialogResult dr = characterEditor.ShowDialog(this);
+                if (dr == DialogResult.Cancel)
+                {
+                    characterEditor.Close();
+                    break;
+                } else // dr == DialogResult.OK
+                {
+                    try
+                    {
+                        _roster.Update(theCharacter.Id, characterEditor.ReturnCharacter);
+                    }
+                    catch (Exception ex)
+                    {
+                        DisplayError("Edit Failed", ex.Message);
+                    }
+                    UpdatelbCharacters();
+                    characterEditor.Close();
+                    break;
+                }
+            } while (true);
         }
 
         private void OnCharacterDelete ( object sender, EventArgs e )
@@ -135,18 +132,30 @@ namespace CharacterCreator.Winhost
             DialogResult result = MessageBox.Show($"Are you sure you want to delete {theCharacter.Name}?", "Delete Character", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                _roster.Delete(theCharacter.Id, out var error);
+                try
+                {
+                    _roster.Delete(theCharacter.Id);
+                }
+                catch (Exception ex)
+                {
+                    DisplayError("Delete Failed", ex.Message);
+                }
                 UpdatelbCharacters();
             }
         }
 
         private void UpdatelbCharacters ()
         {
-            var characters = _roster.GetAll();
-
-            //lbCharacters.DataSource = characters;
-            lbCharacters.DataSource = characters.ToArray();
-            lbCharacters.DisplayMember = "Name";
+            try
+            {
+                var characters = _roster.GetAll();
+                lbCharacters.DataSource = characters.ToArray();
+                lbCharacters.DisplayMember = "Name";
+            }
+            catch (Exception ex)
+            {
+                DisplayError("Error retrieving characters", ex.Message);
+            }
         }
 
         private Character GetSelectedCharacter ()
@@ -158,5 +167,7 @@ namespace CharacterCreator.Winhost
         {
             MessageBox.Show(this, message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        
     }
 }

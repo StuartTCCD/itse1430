@@ -1,15 +1,18 @@
-﻿using System;
+﻿/*
+ * Character Creator - Lab 5
+ * ITSE 1430
+ * Spring 2021
+ * Stuart Beeby
+ */
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace CharacterCreator
 {
     public class ObjectValidator
     {
-        public List<ValidationResult> TryValidate ( IValidatableObject value )
+        public static List<ValidationResult> TryValidate ( IValidatableObject value )
         {
             var context = new ValidationContext(value);
             var errors = new List<ValidationResult>();
@@ -17,6 +20,12 @@ namespace CharacterCreator
             Validator.TryValidateObject(value, context, errors, true);
 
             return errors;
+        }
+
+        public static void Validate (IValidatableObject value)
+        {
+            var context = new ValidationContext(value);
+            Validator.ValidateObject(value, context, true);
         }
     }
 }
